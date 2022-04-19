@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('a73783b50a8434648bd874d019bcae1b');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '장애인의 날',
+        description: '장애인의 날, 우리 지역 장애인에게 따뜻한 사랑을 전해주세요.',
+        imageUrl:
+          'https://form.office.naver.com/getStreamImgByDocId.cmd?docId=NGYxNjY4MjUtNjQyNS00MWM2LThlMmEtZTg1ODI2YjZlMWIz&imageName=0ca5af84-6533-4058-8ed2-0715b7638e55.jpeg',
+        link: {
+          mobileWebUrl: 'https://form.office.naver.com/getStreamImgByDocId.cmd?docId=NGYxNjY4MjUtNjQyNS00MWM2LThlMmEtZTg1ODI2YjZlMWIz&imageName=0ca5af84-6533-4058-8ed2-0715b7638e55.jpeg',
+          webUrl: 'https://form.office.naver.com/getStreamImgByDocId.cmd?docId=NGYxNjY4MjUtNjQyNS00MWM2LThlMmEtZTg1ODI2YjZlMWIz&imageName=0ca5af84-6533-4058-8ed2-0715b7638e55.jpeg',
+        },
+      },
+      social: {
+        likeCount: 1004, //99999가 최대입니다
+        commentCount: 1004, //99999가 최대입니다
+        sharedCount: 1004, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '장애인의 날 알아보기',
+          link: {
+            mobileWebUrl: 'https://form.office.naver.com/getStreamImgByDocId.cmd?docId=NGYxNjY4MjUtNjQyNS00MWM2LThlMmEtZTg1ODI2YjZlMWIz&imageName=0ca5af84-6533-4058-8ed2-0715b7638e55.jpeg',
+            webUrl: 'https://form.office.naver.com/getStreamImgByDocId.cmd?docId=NGYxNjY4MjUtNjQyNS00MWM2LThlMmEtZTg1ODI2YjZlMWIz&imageName=0ca5af84-6533-4058-8ed2-0715b7638e55.jpeg',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
